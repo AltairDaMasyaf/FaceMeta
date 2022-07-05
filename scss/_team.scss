@@ -1,0 +1,84 @@
+//* Team-Mobile
+.team {
+  @include flex(row, wrap, center, center, 0);
+  background-image: url("../images/Team.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-top: 5px solid white;
+  padding: 5rem 0;
+  &__content {
+    @include flex(column, wrap, center, center, 4rem);
+    padding: 5rem 2rem;
+    background-color: rgb(43, 49, 58, 0.5);
+    width: 90%;
+    border-radius: 2rem;
+
+    .team__heading {
+      text-align: center;
+      h1 {
+        font-size: 3rem;
+        font-family: "Inter", sans-serif;
+      }
+    }
+
+    .team__members {
+      @include flex(column, wrap, center, center, 3rem);
+      .team__member {
+        @include flex(column, wrap, center, center, 1rem);
+        background-color: rgb(36, 44, 57);
+        width: 250px;
+        padding: 2rem;
+        border-radius: 2rem;
+        img {
+          height: 120px;
+        }
+        .member__name {
+          font-size: 2rem;
+        }
+        .member__job {
+          font-size: 1.5rem;
+          text-shadow: 0px 0px;
+        }
+      }
+    }
+  }
+}
+
+//* Team-Desktop
+@media screen and (min-width: 768px) {
+  .team {
+    min-height: 1000px;
+
+    .team__content {
+      min-height: 700px;
+      gap: 10rem;
+      flex-wrap: nowrap;
+
+      .team__heading {
+        h1 {
+          font-size: 5rem;
+        }
+      }
+
+      .team__members {
+        @include flex(row, wrap, center, center, 5rem);
+
+        .team__member {
+          width: 300px;
+          transition: all 0.6s;
+          cursor: pointer;
+          img {
+            height: 200px;
+          }
+          &:hover {
+            box-shadow: 0 0 20px 10px white;
+            position: relative;
+            border: 5.5px solid;
+            border-image: linear-gradient(45deg, purple, orange) 1;
+            transform: translateY(-1rem);
+          }
+        }
+      }
+    }
+  }
+}

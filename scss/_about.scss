@@ -1,0 +1,52 @@
+//* About-Mobile
+.about {
+  @include flex(row, wrap, center, center, 0);
+  background-image: url("../images/about.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  margin-top: -2rem;
+  padding-bottom: 5rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+  &__content {
+    @include flex(column, wrap, center, center, 3rem);
+    padding: 2rem;
+    margin-top: 380px;
+    text-align: center;
+    backdrop-filter: blur(1px);
+    .btn-color {
+      font-family: "Inter", sans-serif;
+      font-size: 3rem;
+      padding: 2rem 6rem;
+      border-radius: 4rem;
+      cursor: default;
+      background: rgb(243, 190, 102);
+      background: linear-gradient(
+        90deg,
+        rgba(243, 190, 102, 1) 0%,
+        rgba(206, 16, 250, 1) 100%
+      );
+      &:hover {
+        transform: scale(1);
+      }
+    }
+    p {
+      text-shadow: 2px 2px black;
+    }
+  }
+}
+
+//* About-Desktop
+@media screen and (min-width: 768px) {
+  .about {
+    min-height: 1000px;
+    padding-bottom: 0;
+    &__content {
+      margin-top: 350px;
+      .btn-color {
+        padding: 2rem 10rem;
+      }
+    }
+  }
+}

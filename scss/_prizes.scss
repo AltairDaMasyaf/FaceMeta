@@ -1,0 +1,66 @@
+//* Prizes Global
+.prize {
+  min-height: 100vh;
+  background-image: url("../images/breadcrumps-4x.webp");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  padding-bottom: 30rem;
+  &__header {
+    padding-top: 3rem;
+    .prize__heading {
+      text-align: center;
+      text-decoration: underline;
+    }
+  }
+  &__container {
+    @include flex(row, wrap, center, 0);
+  }
+  &__text {
+    @include flex(row, wrap, center, 8rem);
+    width: 75%;
+    height: auto;
+    font-size: 2rem;
+    padding: 4rem;
+    margin: 10rem;
+    color: $secondary-color;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 26px;
+    box-shadow: 0px 0px 0px 0px rgba(145, 192, 255, 0.5),
+      inset 15px -15px 16px 0px rgba(145, 192, 255, 0.6),
+      inset 0px 11px 28px 0px rgb(255, 255, 255);
+  }
+  &__items {
+    @include flex(column, wrap, flex-start, 3rem);
+  }
+  &__item {
+    width: 100%;
+  }
+  &__item__header {
+    @include flex(row, nowrap, space-between, 0);
+    cursor: pointer;
+  }
+  .prize__chevron {
+    transition: all 0.3s;
+  }
+  .collapsible--expanded .prize__chevron {
+    transform: rotate(180deg);
+  }
+  .collapsible__content {
+    color: black;
+  }
+}
+
+//* Prize-Mobile
+
+@media screen and (max-width: 768px) {
+  .prize {
+    background-image: url("../images/breadcrumps-sm.webp");
+    &__text {
+      margin: 10rem 0;
+      padding: 4rem 2rem;
+      width: 85%;
+      gap: 5rem;
+    }
+  }
+}
