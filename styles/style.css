@@ -135,7 +135,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     transform: translateY(-5rem);
   }
 }
