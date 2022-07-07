@@ -1,0 +1,96 @@
+//* Faq-Mobile
+.faq {
+  background-image: url("../images/faq-sm.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  @include flex(column, wrap, flex-start, center, 3rem);
+  padding: 5rem 2rem;
+  min-height: 500px;
+  border-top: 5px solid white;
+
+  &__heading {
+    h1 {
+      font-size: 4rem;
+      font-family: "Inter", sans-serif;
+      color: #9971f1;
+      text-shadow: 2px 2px white;
+      font-weight: 900;
+    }
+  }
+  &__content {
+    @include flex(column, wrap, center, center, 2);
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    .collapsible {
+      margin: 2rem;
+    }
+    .faq__header {
+      @include flex(row, nowrap, space-between, center, 0);
+      h3 {
+        margin: 0;
+        color: #9971f1;
+        text-shadow: 1px 1px white;
+      }
+      .faq__chevron {
+        color: #9971f1;
+        text-shadow: 1px 1px white;
+        font-size: 2rem;
+        transition: all 0.4s;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      color: #a953f4;
+      text-shadow: 1px 1px white;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+  }
+}
+
+//* Faq-Desktop
+@media screen and (min-width: 768px) {
+  .faq {
+    background-image: url("../images/faq.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border: 0;
+    min-height: 1000px;
+    position: relative;
+    z-index: 1;
+    // border-top: 15px solid white;
+    &::before {
+      content: url("../images/blob-m.png");
+      position: absolute;
+      top: -100px;
+      right: 10%;
+      z-index: 2;
+    }
+    &__heading {
+      z-index: 3;
+      align-self: flex-end;
+      width: 50%;
+      margin-right: 10%;
+      h1 {
+        text-align: center;
+        font-size: 8rem;
+      }
+    }
+    &__content {
+      align-self: flex-end;
+      width: 50%;
+      z-index: 4;
+      margin-right: 10%;
+      border: 2px outset white;
+      .collapsible {
+        position: relative;
+        cursor: pointer;
+
+        p {
+          position: relative;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

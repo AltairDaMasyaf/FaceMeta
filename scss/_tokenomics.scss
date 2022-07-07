@@ -1,130 +1,221 @@
-//* Tokenomics
+//* Tokinomics-Mobile
 
 .tokenomics {
-  @include flex(row, nowrap, center, 0);
-  align-items: center;
-  background-image: url("../images/token-bg-sm.jpg");
-  background-repeat: no-repeat;
+  @include flex(column, wrap, center, center, 3rem);
+  background-image: url("../images/tokenomics2.png");
   background-size: 100% 100%;
-  min-height: 120vh;
-
-  padding: 0 2rem 25rem;
+  background-repeat: no-repeat;
+  padding: 5rem 0 0;
+  &__heading {
+    font-size: 3rem;
+    font-family: "Inter", sans-serif;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    span {
+      background: -webkit-linear-gradient(rgb(131, 58, 180), rgb(170, 10, 106));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
   &__content {
-    @include flex(column, wrap, flex-start, 0);
-    align-items: center;
-    width: 340px;
-    height: 500px;
-    margin-left: 0;
-    margin-top: 10rem !important;
-    background-image: url("../images/memory.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    transform: none;
-    margin-top: 10rem;
-    box-sizing: unset;
-    border-radius: 25px;
-    box-shadow: 0 0 10px 20px white inset;
-    border: 0;
-  }
-  &__text {
-    @include flex(column, wrap, flex-start, 3rem);
-    align-items: center;
-    color: $secondary-color;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(4px);
-    border-radius: 25px;
-    .text__heading {
-      font-family: hand;
-      font-size: 3rem;
-      font-weight: 400;
-      margin-top: 3rem;
-    }
-    .token__list {
-      @include flex(column, wrap, flex-start, 1rem);
-      align-items: flex-start;
-      width: 350px;
-      height: 350px;
-      .token__list__item {
-        margin-left: 2rem;
-        font-size: 1.8rem;
-        background: url("../images/list-item.png") no-repeat left top;
-        padding: 20px 0px 30px 50px;
-        list-style: none;
-      }
-    }
-  }
-}
-@media screen and (min-width: 769px) and (max-width: 1100px) {
-  .tokenomics__content {
-    width: 500px !important;
-    height: 500px !important;
-    margin-left: 10rem !important;
-  }
-  .token__list {
-    height: 400px !important;
-    gap: 0;
-  }
-}
-
-@media screen and (min-width: 769px) {
-  .tokenomics {
-    @include flex(row, nowrap, center, 0);
-    align-items: flex-start;
-    background-image: url("../images/token.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    min-height: 120vh;
-    padding-bottom: 50rem;
-    &__content {
-      margin-left: 30rem;
-      margin-top: 10rem !important;
-      @include flex(column, wrap, flex-start, 0);
-      width: 600px;
-      height: 500px;
-      background-image: url("../images/memory.jpg");
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      transform: rotate(-10deg);
-      margin-top: 10rem;
-      box-sizing: unset;
-      box-shadow: 0 0 10px 20px white inset;
-      border-width: 3rem 3rem 10rem;
-      border-color: white;
-      border-style: solid;
-      border-radius: 25px;
-    }
-    &__text {
-      @include flex(column, wrap, flex-start, 1rem);
-      align-items: center;
-      color: $secondary-color;
-      position: relative;
+    @include flex(column, wrap, flex-start, center, 0);
+    padding: 0 2rem;
+    .token {
+      @include flex(column, wrap, center, center, 2rem);
+      padding: 5rem 1rem;
       width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.35);
-      backdrop-filter: blur(4px);
-      .text__heading {
-        font-family: hand;
-        margin-top: 2rem;
-        font-size: 4rem;
-        font-weight: 400;
+      height: 350px;
+      font-family: "Inter", sans-serif;
+      background: rgb(131, 58, 180);
+      background: linear-gradient(
+        90deg,
+        rgba(131, 58, 180, 1) 0%,
+        rgba(253, 29, 29, 1) 50%,
+        rgba(252, 176, 69, 1) 100%
+      );
+      img {
+        width: 100px;
       }
-      .token__list {
-        @include flex(column, wrap, flex-start, 2rem);
-        align-items: flex-start;
-        // border: 2px solid red;
-        width: 100%;
-        height: 400px;
-        .token__list__item {
-          margin-left: 3rem;
-          font-size: 1.8rem;
-          background: url("../images/list-item.png") no-repeat left top;
-          padding: 20px 0px 30px 50px;
-          list-style: none;
+      &__title {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      &__info {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px black;
+        text-align: center;
+      }
+    }
+    .tax {
+      width: 100%;
+      min-width: 250px;
+      &:nth-child(3) {
+        border: 0;
+        border-radius: 0 0 15px 15px;
+      }
+    }
+    .one {
+      border-radius: 15px 15px 0 0;
+    }
+    .two {
+      border-top: 4px solid white;
+      border-bottom: 4px solid white;
+      background: rgb(48, 46, 190);
+      background: linear-gradient(
+        90deg,
+        rgba(48, 46, 190, 1) 0%,
+        rgba(253, 29, 149, 1) 0%,
+        rgba(140, 69, 252, 1) 100%
+      );
+    }
+    .three {
+      border-bottom: 6px solid white;
+      border-radius: 0 0 0 0;
+      background: rgb(48, 46, 190);
+      background: linear-gradient(
+        90deg,
+        rgba(48, 46, 190, 1) 0%,
+        rgba(0, 122, 21, 1) 0%,
+        rgba(247, 252, 69, 1) 100%
+      );
+    }
+    .four {
+      border-radius: 0 0 15px 15px;
+    }
+  }
+  .footer {
+    @include flex(row, nowrap, center, center, 0);
+    border-top: 2px solid white;
+    width: 100%;
+    height: 10rem;
+    backdrop-filter: blur(10px);
+    &__content {
+      @include flex(row, wrap, center, center, 3rem);
+      i {
+        font-size: 3rem;
+        color: purple;
+        transition: all 0.4s;
+        &:hover {
+          color: white;
         }
       }
+    }
+  }
+}
+
+//* Token-Desktop
+@media screen and (min-width: 768px) {
+  .tokenomics {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0;
+    height: 1200px;
+    position: relative;
+    z-index: 5;
+    &__heading {
+      font-size: 8rem;
+      z-index: 5;
+      margin: 0;
+      transform: translateY(0rem);
+    }
+    &__content {
+      transform: translateY(0);
+      flex-direction: column;
+      z-index: 5;
+      .token {
+        max-width: 400px;
+        height: 400px;
+        padding: 4rem 2rem;
+        cursor: pointer;
+        transition: all 0.4s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &__title {
+          font-size: 3rem;
+        }
+        p {
+          text-align: left;
+        }
+      }
+      .tax {
+        min-width: 250px;
+        &:nth-child(1) {
+          background: rgb(48, 46, 190);
+          background: linear-gradient(
+            90deg,
+            rgba(48, 46, 190, 1) 0%,
+            rgba(0, 122, 21, 1) 0%,
+            rgba(247, 252, 69, 1) 100%
+          );
+        }
+        &:nth-child(2) {
+          background: rgb(131, 58, 180);
+          background: linear-gradient(
+            90deg,
+            rgba(131, 58, 180, 1) 0%,
+            rgba(253, 29, 29, 1) 50%,
+            rgba(252, 176, 69, 1) 100%
+          );
+        }
+        &:nth-child(3) {
+          border: 0;
+          border-radius: 0 15px 15px 0;
+          background: rgb(48, 46, 190);
+          background: linear-gradient(
+            90deg,
+            rgba(48, 46, 190, 1) 0%,
+            rgba(253, 29, 149, 1) 0%,
+            rgba(140, 69, 252, 1) 100%
+          );
+        }
+      }
+      .one {
+        border-radius: 15px 0 0 15px;
+        .token__title {
+          font-size: 2.5rem;
+        }
+      }
+      .two {
+        border: 0;
+        border-left: 6px solid white;
+        border-right: 6px solid white;
+      }
+      .three {
+        border-radius: 0 0 0 0;
+        border: 0;
+        border-right: 6px solid white;
+        background: rgb(48, 46, 190);
+        background: linear-gradient(
+          90deg,
+          rgba(48, 46, 190, 1) 0%,
+          rgba(0, 122, 21, 1) 0%,
+          rgba(247, 252, 69, 1) 100%
+        );
+      }
+      .four {
+        border-radius: 0 15px 15px 0;
+      }
+    }
+    .footer {
+      height: 150px;
+      i {
+        font-size: 5rem !important;
+      }
+    }
+  }
+}
+
+//* Token-DesktopXL
+@media screen and (min-width: 1200px) {
+  .tokenomics {
+    &::before {
+      content: url("../images/blob-tk.png");
+      position: absolute;
+      top: -20rem;
+      left: 40%;
+      z-index: 5;
     }
   }
 }

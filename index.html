@@ -6,7 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FaceMeta</title>
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.css"
+      integrity="sha512-E+53kXnJyuZFSz75xSmTfCpUNj3gp9Bd80TeQQMTPJTVWDRHPOpEYczGwWtsZXvaiz27cqvhdH8U+g/NMYua3A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Nav -->
@@ -16,15 +30,17 @@
         <use xlink:href="./images/sprite.svg#menu"></use>
       </svg>
       <ul class="list nav__list collapsible__content">
-        <li class="nav__item"><a href="">About</a></li>
-        <li class="nav__item"><a href="">Team</a></li>
-        <li class="nav__item"><a href="">RoadMap</a></li>
-        <li class="nav__item"><a href="">Contact</a></li>
+        <li class="nav__item"><a href="#about">About</a></li>
+        <li class="nav__item"><a href="#team">Team</a></li>
+        <li class="nav__item"><a href="#roadmap">RoadMap</a></li>
+        <li class="nav__item"><a href="#faq">Faq</a></li>
+        <li class="nav__item"><a href="#tokenomics">Tokenomics</a></li>
+        <button class="btn btn-color">Metaswap</button>
       </ul>
     </nav>
 
     <!-- Hero -->
-    <section class="hero">
+    <section id="hero" class="hero">
       <div class="hero__content">
         <div class="hero__info">
           <h3 class="hero__info__vice__heading">DISCOVER HOW TO EARN MORE</h3>
@@ -39,7 +55,7 @@
     </section>
 
     <!-- About -->
-    <section class="about">
+    <section id="about" class="about">
       <div class="container about__content">
         <div class="btn btn-color">About Us</div>
         <p>
@@ -51,7 +67,7 @@
     </section>
 
     <!-- Team -->
-    <section class="team">
+    <section id="team" class="team">
       <div class="team__content">
         <div class="team__heading">
           <h1>Here Our Stars</h1>
@@ -68,11 +84,7 @@
             <h3 class="member__name">Emre SMART</h3>
             <p class="member__job">React Developer</p>
           </div>
-          <div class="team__member">
-            <img src="./images/team3.png" alt="" class="member__img" />
-            <h3 class="member__name">Emre SMART</h3>
-            <p class="member__job">React Developer</p>
-          </div>
+
           <div class="team__member">
             <img src="./images/team2.png" alt="" class="member__img" />
             <h3 class="member__name">Emre SMART</h3>
@@ -81,7 +93,294 @@
         </div>
       </div>
     </section>
+    <!-- Rm-Intro -->
+    <section id="roadmap" class="rm-intro">
+      <div class="rm">
+        <h3 class="btn rm__uptitle">Follow Our Steps</h3>
+        <h1>ROADMAP</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          voluptatum odio voluptates id recusandae neque voluptas quaerat
+          cumque, quasi inventore.
+        </p>
+      </div>
+    </section>
 
+    <!-- Rm-Main -->
+    <section class="rm-main">
+      <div class="rm-main__content">
+        <div class="rm-main__content__info">
+          <h1><span>Check Out</span><br />Our Steps</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
+            dolorem voluptatibus placeat delectus sint ducimus aliquam atque
+            unde corrupti temporibus quasi ipsam, officiis quos, eum voluptatum
+            repellendus consequuntur dolores nihil!
+          </p>
+        </div>
+        <div class="rm-main__content__phase">
+          <h1>Phase <span>One</span></h1>
+          <img src="./images/rm-line.png" alt="" />
+          <div class="phase__box">
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>WEBSITE CREATION</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>TOKEN CREATION IN BSC</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>SWAP CREATION</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>NOMICS LISTINGS</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>KYC</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>FAIR LAUNCH</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>COMMUNITY DEVELOPMENT</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>START-UP MARKETING CAMPAIGN</p>
+            </div>
+            <div class="phase__box__item">
+              <div class="ball"></div>
+              <p>STAKING APP LAUNCH</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rm-Phases -->
+    <section class="rm-phases">
+      <div class="rm-phases__content">
+        <div class="rm-phases__content__phase">
+          <div class="rm-phases__content__phase__heading">
+            <h1>Phase <span>Two</span></h1>
+          </div>
+          <img src="./images/rm-line.png" alt="" />
+          <div class="rm-phases__content__phase__box">
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>CMC LISTING</p>
+            </div>
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>CG LISTING</p>
+            </div>
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>FIRST CEX LISTING</p>
+            </div>
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>
+                SECOND PHASE MARKETING CAMPAIGN WITH MOST FAMOUS INFLUENCERS IN
+                TWITTER AND YOUTUBE
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="rm-phases__content__phase">
+          <div class="rm-phases__content__phase__heading">
+            <h1>Phase <span>Three</span></h1>
+          </div>
+          <img src="./images/rm-line.png" alt="" />
+          <div class="rm-phases__content__phase__box">
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>
+                PARTNERSHIPS WITH DIFFERENT WEB 3 COMPANIES ALL OVER THE WORLD
+              </p>
+            </div>
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>TIER 1 EXCHANGE LISTINGS (KUCOIN, GATE.IO ETC)</p>
+            </div>
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>VR BASED NFT MARKETPLACE DAPP LAUNCH</p>
+            </div>
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>CRYPTO FORUM DAPP LAUNCH</p>
+            </div>
+          </div>
+        </div>
+        <div class="rm-phases__content__phase">
+          <div class="rm-phases__content__phase__heading">
+            <h1>Phase <span>Four</span></h1>
+          </div>
+          <img src="./images/rm-line.png" alt="" />
+          <div class="rm-phases__content__phase__box">
+            <div class="rm-phases__content__phase__box__item">
+              <div class="ball"></div>
+              <p>CREATION OF MULTIPLE DAPSS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="faq__heading">
+        <h1>FAQ</h1>
+      </div>
+      <div class="faq__content">
+        <div class="collapsible">
+          <header class="faq__header">
+            <h3 class="faq__heading">Question 1</h3>
+            <i class="fa-solid fa-chevron-down faq__chevron"></i>
+          </header>
+          <div class="collapsible__content">
+            <p>
+              Download trustwallet From The App Store or Google Play Store, for
+              free. Or add the desktop browser extension on Google Chrome by
+              going to metamask.io. Follow their easy Questions from their guide
+              to set up a wallet.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapsible">
+          <header class="faq__header">
+            <h3 class="faq__heading">Question 2</h3>
+            <i class="fa-solid fa-chevron-down faq__chevron"></i>
+          </header>
+          <div class="collapsible__content">
+            <p>
+              Download trustwallet From The App Store or Google Play Store, for
+              free. Or add the desktop browser extension on Google Chrome by
+              going to metamask.io. Follow their easy Questions from their guide
+              to set up a wallet.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapsible">
+          <header class="faq__header">
+            <h3 class="faq__heading">Question 3</h3>
+            <i class="fa-solid fa-chevron-down faq__chevron"></i>
+          </header>
+          <div class="collapsible__content">
+            <p>
+              Download trustwallet From The App Store or Google Play Store, for
+              free. Or add the desktop browser extension on Google Chrome by
+              going to metamask.io. Follow their easy Questions from their guide
+              to set up a wallet.
+            </p>
+          </div>
+        </div>
+        <div class="collapsible">
+          <header class="faq__header">
+            <h3 class="faq__heading">Question 4</h3>
+            <i class="fa-solid fa-chevron-down faq__chevron"></i>
+          </header>
+          <div class="collapsible__content">
+            <p>
+              Download trustwallet From The App Store or Google Play Store, for
+              free. Or add the desktop browser extension on Google Chrome by
+              going to metamask.io. Follow their easy Questions from their guide
+              to set up a wallet.
+            </p>
+          </div>
+        </div>
+        <div class="collapsible">
+          <header class="faq__header">
+            <h3 class="faq__heading">Question 5</h3>
+            <i class="fa-solid fa-chevron-down faq__chevron"></i>
+          </header>
+          <div class="collapsible__content">
+            <p>
+              Download trustwallet From The App Store or Google Play Store, for
+              free. Or add the desktop browser extension on Google Chrome by
+              going to metamask.io. Follow their easy Questions from their guide
+              to set up a wallet.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="tokenomics">
+      <h1 class="tokenomics__heading"><span>Token</span>omics</h1>
+      <div class="tokenomics__content">
+        <div class="grid grid--1x4">
+          <div class="token one">
+            <img src="./images/luggage.png " alt="" />
+            <div class="token__title">20% Team and Development</div>
+            <p class="token__info">
+              For development purposes such as cex listings and expenses of
+              development.
+            </p>
+          </div>
+          <div class="token two">
+            <img src="./images/car.png " alt="" />
+            <div class="token__title">10% MARKETING</div>
+            <p class="token__info">
+              These amount of tokens will be used for marketing purposes.
+            </p>
+          </div>
+          <div class="token three">
+            <img src="./images/usd.png " alt="" />
+            <div class="token__title">30% DAPPS</div>
+            <p class="token__info">
+              These amount of tokens will be used for dapps application such as
+              staking etc.
+            </p>
+          </div>
+          <div class="token four">
+            <img src="./images/vault.png " alt="" />
+            <div class="token__title">40% LIQUIDTY</div>
+            <p class="token__info">These amount of tokens will be added.</p>
+          </div>
+        </div>
+
+        <div class="grid grid--1x3">
+          <div class="token one tax">
+            <img src="./images/car.png " alt="" />
+            <div class="token__title">5% MARKETING</div>
+            <p class="token__info">Tax Distribution</p>
+          </div>
+          <div class="token two tax">
+            <img src="./images/luggage.png " alt="" />
+            <div class="token__title">2% TEAM</div>
+            <p class="token__info">Tax Distribution</p>
+          </div>
+          <div class="token three tax">
+            <img src="./images/car.png " alt="" />
+            <div class="token__title">3% LP</div>
+            <p class="token__info">Tax Distribution</p>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="footer__content">
+          <a href="https://twitter.com">
+            <i class="fa-brands fa-twitter tw"></i
+          ></a>
+          <a href="https://twitter.com">
+            <i class="fa-brands fa-telegram tl"></i
+          ></a>
+          <a href="https://twitter.com">
+            <i class="fa-brands fa-facebook fb"></i
+          ></a>
+        </div>
+      </footer>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

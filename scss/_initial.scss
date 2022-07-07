@@ -7,6 +7,8 @@ html {
   font-size: 62.5%;
   color: white;
   height: 100vh;
+  scroll-behavior: smooth;
+  scroll-padding: 10rem;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -53,12 +55,12 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 p {
   font-size: 2rem;
-  font-family: "Space Grotesk", sans-serif;
-  text-shadow: 1px 1px white;
+  // font-family: "Space Grotesk", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 @media screen and (max-width: 768px) {
   h1 {

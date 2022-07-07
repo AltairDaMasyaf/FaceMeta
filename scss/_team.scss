@@ -9,15 +9,16 @@
   &__content {
     @include flex(column, wrap, center, center, 4rem);
     padding: 5rem 2rem;
-    background-color: rgb(43, 49, 58, 0.5);
+    // background-color: rgb(43, 49, 58, 0.5);
     width: 90%;
     border-radius: 2rem;
 
     .team__heading {
       text-align: center;
       h1 {
-        font-size: 3rem;
+        font-size: 4rem;
         font-family: "Inter", sans-serif;
+        color: white;
       }
     }
 
@@ -47,16 +48,16 @@
 //* Team-Desktop
 @media screen and (min-width: 768px) {
   .team {
-    min-height: 1000px;
-
+    min-height: 1200px;
+    align-items: flex-start;
     .team__content {
       min-height: 700px;
-      gap: 10rem;
+      gap: 15rem;
       flex-wrap: nowrap;
 
       .team__heading {
         h1 {
-          font-size: 5rem;
+          font-size: 9rem;
         }
       }
 
@@ -70,7 +71,17 @@
           img {
             height: 200px;
           }
+          .member__name {
+            font-weight: 500;
+          }
+          .member__job {
+            font-size: 1.5rem;
+            font-family: "Space Grotesk", sans-serif;
+            font-weight: 500;
+          }
           &:hover {
+            background-color: white;
+            color: black;
             box-shadow: 0 0 20px 10px white;
             position: relative;
             border: 5.5px solid;

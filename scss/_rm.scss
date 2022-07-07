@@ -1,0 +1,319 @@
+//*  Rm-Mobile
+.rm-intro {
+  @include flex(row, wrap, center, center, 0);
+  background-image: url("../images/rm-intro.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 500px;
+  border-top: 5px solid white;
+  .rm {
+    @include flex(column, wrap, center, center, 2rem);
+    backdrop-filter: blur(1px);
+    padding: 0 2rem;
+    .rm__uptitle {
+      font-family: "Inter", sans-serif;
+      font-size: 1.6rem;
+      padding: 2rem 6rem;
+      border-radius: 4rem;
+      cursor: default;
+      background: rgb(243, 190, 102);
+      background: linear-gradient(
+        90deg,
+        rgba(243, 190, 102, 1) 0%,
+        rgba(206, 16, 250, 1) 100%
+      );
+    }
+    h1 {
+      font-family: "Inter", sans-serif;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      text-shadow: 0px 0px;
+      font-size: 1.3rem;
+      text-align: center;
+      color: rgb(220, 220, 220);
+    }
+  }
+}
+
+//* RM-Desktop
+@media screen and (min-width: 768px) {
+  .rm-intro {
+    min-height: 1000px;
+    .rm {
+      margin-bottom: 5rem;
+      gap: 7rem;
+      width: 700px;
+      .rm__uptitle {
+        font-size: 3rem;
+        &:hover {
+          transform: none;
+        }
+      }
+      h1 {
+        font-size: 8rem;
+      }
+      p {
+        text-align: justify;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+//* Rm-Main-Mobile
+.rm-main {
+  @include flex(row, wrap, center, center, 0);
+  align-content: flex-start;
+  background-image: url("../images/rm.png");
+  background-size: cover;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  min-height: 1000px;
+  padding: 2rem;
+
+  &__content {
+    @include flex(column, wrap, center, center, 8rem);
+    margin-top: 10rem;
+
+    &__info {
+      @include flex(column, wrap, center, center, 2rem);
+      width: 340px;
+      h1 {
+        font-size: 3rem;
+        span {
+          color: #f3be66;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+        text-shadow: 2px 2px black;
+        text-align: center;
+        line-height: 1.6;
+      }
+    }
+
+    &__phase {
+      @include flex(column, wrap, flex-start, center, 2rem);
+      width: 330px;
+      h1 {
+        font-size: 3rem;
+        span {
+          color: #f3be66;
+        }
+      }
+      img {
+        width: 150px;
+        height: 7px;
+        transform: rotate(90deg);
+        margin: 5rem 0;
+      }
+      .phase__box {
+        @include flex(column, wrap, center, flex-start, 2rem);
+        width: 330px;
+        background: rgb(243, 190, 102);
+        background: linear-gradient(
+          90deg,
+          rgba(243, 190, 102, 1) 0%,
+          rgba(206, 16, 250, 1) 100%
+        );
+        border-radius: 2rem;
+        padding: 2rem;
+        &__item {
+          @include flex(row, nowrap, flex-start, center, 1rem);
+          .ball {
+            width: 1rem;
+            height: 1rem;
+            background-color: white;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+//* Rm-Main-Desktop-Sm
+@media screen and (min-width: 1200px) {
+  .rm-main {
+    min-height: 1000px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &__content {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      width: 100%;
+      min-height: 1000px;
+
+      &__info {
+        width: 500px;
+
+        h1 {
+          font-size: 8rem;
+        }
+        p {
+          font-size: 2rem;
+          text-align: left;
+          line-height: 2;
+        }
+      }
+      &__phase {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 700px;
+        flex-grow: 1;
+        justify-content: flex-start;
+        gap: 0rem;
+        transform: translateX(-10rem);
+        h1 {
+          transform: rotate(-90deg) translateY(-5rem);
+          font-size: 7rem;
+          text-align: justify;
+          min-width: 450px;
+          max-height: 50px;
+          margin: 0;
+        }
+        img {
+          transform: none;
+          width: 100px;
+          transform: translateX(-15rem);
+        }
+        .phase__box {
+          min-width: 350px;
+          // height: auto;
+          padding: 4rem;
+          transform: translateX(-15rem);
+        }
+      }
+    }
+  }
+}
+//* Rm-Main-Desktop
+@media screen and (min-width: 1500px) {
+  .rm-main__content {
+    &__info {
+      margin-left: 10rem;
+    }
+    &__phase {
+      justify-content: center;
+      h1 {
+        transform: rotate(-90deg) translateY(10rem);
+      }
+      img {
+        width: 200px;
+      }
+      img,
+      .phase__box {
+        transform: translateX(-5rem);
+      }
+    }
+  }
+}
+
+//* Rm-Phases-Mobile
+.rm-phases {
+  @include flex(row, nowrap, center, center, 0);
+  background-image: url("../images/rm-phases.png");
+  background-size: cover;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  padding: 4rem 2rem 10rem;
+
+  &__content {
+    @include flex(column, wrap, flex-start, center, 2rem);
+    margin-top: 3rem;
+    &__phase {
+      @include flex(column, wrap, flex-start, center, 2rem);
+      width: 330px;
+      h1 {
+        font-size: 3rem;
+        span {
+          color: #f3be66;
+        }
+      }
+      img {
+        width: 150px;
+        height: 7px;
+        transform: rotate(90deg);
+        margin: 5rem 0;
+      }
+      &__box {
+        @include flex(column, wrap, center, flex-start, 2rem);
+        width: 330px;
+        background: rgb(243, 190, 102);
+        background: linear-gradient(
+          90deg,
+          rgba(243, 190, 102, 1) 0%,
+          rgba(206, 16, 250, 1) 100%
+        );
+        border-radius: 2rem;
+        padding: 2rem;
+        &__item {
+          text-align: left;
+          @include flex(row, nowrap, flex-start, center, 1rem);
+          .ball {
+            min-width: 1rem;
+            height: 1rem;
+            background-color: white;
+            border-radius: 50%;
+          }
+          .ball1 {
+            width: 3rem;
+            height: 1rem;
+            background-color: white;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+//* Rm-Phases-Desktop
+@media screen and (min-width: 1500px) {
+  .rm-phases {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &__content {
+      @include flex(row, wrap, center, flex-start, 10rem);
+      width: 100%;
+      min-height: 700px;
+      margin: 0;
+      padding: 0;
+      &__phase {
+        width: 700px;
+        height: 500px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0rem;
+        padding: 0;
+        img {
+          width: 100px;
+        }
+        &__heading {
+          transform: rotate(-90deg) translateY(-18rem);
+          text-align: center;
+          @include flex(row, nowrap, center, center, 0);
+          h1 {
+            min-width: 450px;
+
+            margin: 0;
+            font-size: 5rem;
+          }
+        }
+
+        img {
+          width: 200px;
+          transform: rotate(0deg) translateX(-35rem);
+        }
+        &__box {
+          min-width: 350px;
+          transform: translateX(-35rem);
+          padding: 5rem 2rem;
+        }
+      }
+    }
+  }
+}
