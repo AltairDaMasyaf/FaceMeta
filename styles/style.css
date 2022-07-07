@@ -416,7 +416,7 @@ button:hover {
 .nav__item > a {
   text-decoration: none;
   color: white;
-  font-size: 4.8rem;
+  font-size: 3.5rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -655,7 +655,7 @@ button:hover {
 }
 .rm-intro .rm p {
   font-family: "Poppins", sans-serif;
-  text-shadow: 0px 0px;
+  text-shadow: 3px 3px black !important;
   font-size: 1.3rem;
   text-align: center;
   color: gainsboro;
@@ -915,12 +915,6 @@ button:hover {
 }
 .rm-phases__content__phase__box__item .ball {
   min-width: 1rem;
-  height: 1rem;
-  background-color: white;
-  border-radius: 50%;
-}
-.rm-phases__content__phase__box__item .ball1 {
-  width: 3rem;
   height: 1rem;
   background-color: white;
   border-radius: 50%;
