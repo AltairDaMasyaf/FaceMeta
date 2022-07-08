@@ -3,12 +3,14 @@
   background-image: url("../images/faq-sm.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  @include flex(column, wrap, flex-start, center, 3rem);
-  padding: 5rem 2rem;
+  @include flex(column, wrap, space-between, center, 3rem);
+  padding: 5rem 0 0;
   min-height: 500px;
   border-top: 5px solid white;
 
   &__heading {
+    position: relative;
+    z-index: 5;
     h1 {
       font-size: 4rem;
       font-family: "Inter", sans-serif;
@@ -21,7 +23,8 @@
     @include flex(column, wrap, center, center, 2);
     backdrop-filter: blur(5px);
     border-radius: 2rem;
-    z-index: 6;
+    padding: 0 2rem;
+    z-index: 5;
     .collapsible {
       margin: 2rem;
     }
@@ -47,6 +50,34 @@
       margin-top: 1rem;
     }
   }
+  .media {
+    backdrop-filter: blur(5px);
+    border-radius: 2rem;
+    margin: 5rem;
+    @include flex(row, wrap, center, center, 2rem);
+    img {
+      max-width: 200px;
+    }
+  }
+  .footer {
+    bottom: 0;
+    @include flex(row, nowrap, center, center, 0);
+    border-top: 2px solid white;
+    width: 100%;
+    height: 10rem;
+    backdrop-filter: blur(10px);
+    &__content {
+      @include flex(row, wrap, center, center, 3rem);
+      i {
+        font-size: 3rem;
+        color: purple;
+        transition: all 0.4s;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
 }
 
 //* Faq-Desktop
@@ -65,10 +96,9 @@
       position: absolute;
       top: -100px;
       right: 10%;
-      z-index: 2;
+      z-index: 4;
     }
     &__heading {
-      z-index: 3;
       align-self: flex-end;
       width: 50%;
       margin-right: 10%;
@@ -81,6 +111,7 @@
       align-self: flex-end;
       width: 50%;
       margin-right: 10%;
+      margin-bottom: 10rem;
       border: 2px outset white;
       .collapsible {
         position: relative;
@@ -90,6 +121,17 @@
           position: relative;
           font-size: 2rem;
         }
+      }
+    }
+    .media {
+      img {
+        max-width: 300px;
+      }
+    }
+    .footer {
+      height: 150px;
+      i {
+        font-size: 5rem !important;
       }
     }
   }

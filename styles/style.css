@@ -994,12 +994,16 @@ button:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  padding: 5rem 2rem;
+  padding: 5rem 0 0;
   min-height: 500px;
   border-top: 5px solid white;
+}
+.faq__heading {
+  position: relative;
+  z-index: 5;
 }
 .faq__heading h1 {
   font-size: 4rem;
@@ -1017,7 +1021,8 @@ button:hover {
   gap: 2;
   backdrop-filter: blur(5px);
   border-radius: 2rem;
-  z-index: 6;
+  padding: 0 2rem;
+  z-index: 5;
 }
 .faq__content .collapsible {
   margin: 2rem;
@@ -1048,6 +1053,49 @@ button:hover {
   line-height: 1.5;
   margin-top: 1rem;
 }
+.faq .media {
+  backdrop-filter: blur(5px);
+  border-radius: 2rem;
+  margin: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.faq .media img {
+  max-width: 200px;
+}
+.faq .footer {
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  border-top: 2px solid white;
+  width: 100%;
+  height: 10rem;
+  backdrop-filter: blur(10px);
+}
+.faq .footer__content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+.faq .footer__content i {
+  font-size: 3rem;
+  color: purple;
+  transition: all 0.4s;
+}
+.faq .footer__content i:hover {
+  color: white;
+}
 
 @media screen and (min-width: 768px) {
   .faq {
@@ -1064,10 +1112,9 @@ button:hover {
     position: absolute;
     top: -100px;
     right: 10%;
-    z-index: 2;
+    z-index: 4;
   }
   .faq__heading {
-    z-index: 3;
     align-self: flex-end;
     width: 50%;
     margin-right: 10%;
@@ -1080,6 +1127,7 @@ button:hover {
     align-self: flex-end;
     width: 50%;
     margin-right: 10%;
+    margin-bottom: 10rem;
     border: 2px outset white;
   }
   .faq__content .collapsible {
@@ -1089,6 +1137,15 @@ button:hover {
   .faq__content .collapsible p {
     position: relative;
     font-size: 2rem;
+  }
+  .faq .media img {
+    max-width: 300px;
+  }
+  .faq .footer {
+    height: 150px;
+  }
+  .faq .footer i {
+    font-size: 5rem !important;
   }
 }
 .tokenomics {
@@ -1101,7 +1158,7 @@ button:hover {
   background-image: url("../images/tokenomics2.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 5rem 0 0;
+  padding: 10rem 0;
 }
 .tokenomics__heading {
   font-size: 5rem;
@@ -1176,43 +1233,16 @@ button:hover {
 .tokenomics__content .four {
   border-radius: 0 0 15px 15px;
 }
-.tokenomics .footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  gap: 0;
-  border-top: 2px solid white;
-  width: 100%;
-  height: 10rem;
-  backdrop-filter: blur(10px);
-}
-.tokenomics .footer__content {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-}
-.tokenomics .footer__content i {
-  font-size: 3rem;
-  color: purple;
-  transition: all 0.4s;
-}
-.tokenomics .footer__content i:hover {
-  color: white;
-}
 
 @media screen and (min-width: 768px) {
   .tokenomics {
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 0;
-    height: 1200px;
+    gap: 15rem;
+    padding-top: 15rem;
+    min-height: 1000px;
     position: relative;
-    z-index: 5;
+    z-index: 1;
   }
   .tokenomics__heading {
     font-size: 8rem;
@@ -1224,6 +1254,7 @@ button:hover {
     transform: translateY(0);
     flex-direction: column;
     z-index: 5;
+    gap: 10rem;
   }
   .tokenomics__content .token {
     max-width: 400px;
@@ -1278,12 +1309,6 @@ button:hover {
   }
   .tokenomics__content .four {
     border-radius: 0 15px 15px 0;
-  }
-  .tokenomics .footer {
-    height: 150px;
-  }
-  .tokenomics .footer i {
-    font-size: 5rem !important;
   }
 }
 @media screen and (min-width: 1200px) {

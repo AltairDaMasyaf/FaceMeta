@@ -5,7 +5,7 @@
   background-image: url("../images/tokenomics2.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  padding: 5rem 0 0;
+  padding: 10rem 0;
   &__heading {
     font-size: 5rem;
     font-family: "Inter", sans-serif;
@@ -84,24 +84,6 @@
       border-radius: 0 0 15px 15px;
     }
   }
-  .footer {
-    @include flex(row, nowrap, center, center, 0);
-    border-top: 2px solid white;
-    width: 100%;
-    height: 10rem;
-    backdrop-filter: blur(10px);
-    &__content {
-      @include flex(row, wrap, center, center, 3rem);
-      i {
-        font-size: 3rem;
-        color: purple;
-        transition: all 0.4s;
-        &:hover {
-          color: white;
-        }
-      }
-    }
-  }
 }
 
 //* Token-Desktop
@@ -109,10 +91,11 @@
   .tokenomics {
     justify-content: space-between;
     flex-wrap: nowrap;
-    padding: 0;
-    height: 1200px;
+    gap: 15rem;
+    padding-top: 15rem;
+    min-height: 1000px;
     position: relative;
-    z-index: 5;
+    z-index: 1;
     &__heading {
       font-size: 8rem;
       z-index: 5;
@@ -123,6 +106,7 @@
       transform: translateY(0);
       flex-direction: column;
       z-index: 5;
+      gap: 10rem;
       .token {
         max-width: 400px;
         height: 400px;
@@ -196,12 +180,6 @@
       }
       .four {
         border-radius: 0 15px 15px 0;
-      }
-    }
-    .footer {
-      height: 150px;
-      i {
-        font-size: 5rem !important;
       }
     }
   }
