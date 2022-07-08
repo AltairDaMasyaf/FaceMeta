@@ -7,13 +7,19 @@
   height: 500px;
   border-top: 5px solid white;
   .rm {
+    background: linear-gradient(#3d1d66 0 0) padding-box,
+      linear-gradient(to right, #9c20aa, #fd9e63) border-box;
+    padding: 10px;
+    border: 20px solid transparent;
+    border-radius: 50%;
+    height: 30rem;
     @include flex(column, wrap, center, center, 2rem);
     backdrop-filter: blur(1px);
     padding: 0 2rem;
     .rm__uptitle {
       font-family: "Inter", sans-serif;
       font-size: 1.6rem;
-      padding: 2rem 6rem;
+      padding: 1rem 2rem;
       border-radius: 4rem;
       cursor: default;
       background: rgb(243, 190, 102);
@@ -30,10 +36,10 @@
     }
     p {
       font-family: "Poppins", sans-serif;
-      text-shadow: 0px 0px;
       font-size: 1.3rem;
       text-align: center;
       color: rgb(220, 220, 220);
+      text-shadow: 1px 1px black;
     }
   }
 }
@@ -41,8 +47,15 @@
 //* RM-Desktop
 @media screen and (min-width: 768px) {
   .rm-intro {
-    min-height: 1000px;
+    min-height: 800px;
+    padding-top: 5rem;
     .rm {
+      background: linear-gradient(#3d1d66 0 0) padding-box,
+        linear-gradient(to right, #9c20aa, #fd9e63) border-box;
+      padding: 10px;
+      border: 45px solid transparent;
+      border-radius: 50%;
+      height: 65rem;
       margin-bottom: 5rem;
       gap: 7rem;
       width: 700px;
@@ -255,12 +268,6 @@
           @include flex(row, nowrap, flex-start, center, 1rem);
           .ball {
             min-width: 1rem;
-            height: 1rem;
-            background-color: white;
-            border-radius: 50%;
-          }
-          .ball1 {
-            width: 3rem;
             height: 1rem;
             background-color: white;
             border-radius: 50%;

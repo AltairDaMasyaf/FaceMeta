@@ -304,7 +304,7 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   text-align: center;
   padding: 2rem;
 }
@@ -320,7 +320,7 @@ button:hover {
 }
 .hero__content .hero__info__parag {
   color: #a953f4;
-  text-shadow: 1px 1px white;
+  text-shadow: -1px -1px black;
 }
 
 @media screen and (min-width: 769px) {
@@ -458,11 +458,11 @@ button:hover {
   justify-content: center;
   align-items: center;
   gap: 0;
-  background-image: url("../images/about.png");
+  background-image: url("../images/about-sm.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  min-height: 500px;
-  margin-top: -2rem;
+  min-height: 600px;
+  margin-top: -1rem;
   padding-bottom: 5rem;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
@@ -474,7 +474,7 @@ button:hover {
   align-items: center;
   gap: 3rem;
   padding: 2rem;
-  margin-top: 380px;
+  margin-top: 80px;
   text-align: center;
   backdrop-filter: blur(1px);
 }
@@ -492,15 +492,18 @@ button:hover {
 }
 .about__content p {
   text-shadow: 2px 2px black;
+  text-align: justify;
 }
 
 @media screen and (min-width: 768px) {
   .about {
+    background-image: url("../images/about.png");
     min-height: 1000px;
+    margin-top: -3rem;
     padding-bottom: 0;
   }
   .about__content {
-    margin-top: 350px;
+    margin-top: 450px;
   }
   .about__content .btn-color {
     padding: 2rem 10rem;
@@ -630,6 +633,11 @@ button:hover {
   border-top: 5px solid white;
 }
 .rm-intro .rm {
+  background: linear-gradient(#3d1d66 0 0) padding-box, linear-gradient(to right, #9c20aa, #fd9e63) border-box;
+  padding: 10px;
+  border: 20px solid transparent;
+  border-radius: 50%;
+  height: 30rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -642,7 +650,7 @@ button:hover {
 .rm-intro .rm .rm__uptitle {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
-  padding: 2rem 6rem;
+  padding: 1rem 2rem;
   border-radius: 4rem;
   cursor: default;
   background: #f3be66;
@@ -663,9 +671,15 @@ button:hover {
 
 @media screen and (min-width: 768px) {
   .rm-intro {
-    min-height: 1000px;
+    min-height: 800px;
+    padding-top: 5rem;
   }
   .rm-intro .rm {
+    background: linear-gradient(#3d1d66 0 0) padding-box, linear-gradient(to right, #9c20aa, #fd9e63) border-box;
+    padding: 10px;
+    border: 45px solid transparent;
+    border-radius: 50%;
+    height: 65rem;
     margin-bottom: 5rem;
     gap: 7rem;
     width: 700px;
@@ -1003,6 +1017,7 @@ button:hover {
   gap: 2;
   backdrop-filter: blur(5px);
   border-radius: 2rem;
+  z-index: 6;
 }
 .faq__content .collapsible {
   margin: 2rem;
@@ -1064,7 +1079,6 @@ button:hover {
   .faq__content {
     align-self: flex-end;
     width: 50%;
-    z-index: 4;
     margin-right: 10%;
     border: 2px outset white;
   }
@@ -1090,7 +1104,7 @@ button:hover {
   padding: 5rem 0 0;
 }
 .tokenomics__heading {
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: "Inter", sans-serif;
   color: white;
   font-weight: bold;

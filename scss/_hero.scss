@@ -10,7 +10,7 @@
     backdrop-filter: blur(2px);
     padding: 10rem 2rem 5rem;
     .hero__info {
-      @include flex(column, wrap, center, center, 1rem);
+      @include flex(column, wrap, center, center, 2rem);
       text-align: center;
       padding: 2rem;
       &__vice__heading {
@@ -25,7 +25,7 @@
       }
       &__parag {
         color: #a953f4;
-        text-shadow: 1px 1px white;
+        text-shadow: -1px -1px black;
       }
     }
   }

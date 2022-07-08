@@ -91,7 +91,7 @@ $spaceamounts: (1, 2, 3, 4, 5);
 @media screen and (max-width: 768px) {
   .collapsible--expanded .nav__list {
     height: 100vh;
-    @include flex(column, wrap, center, center, 4rem);
+    @include flex(column, wrap, center, center, 2rem);
     transform: translateY(-5rem);
   }
 }
