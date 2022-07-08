@@ -517,7 +517,7 @@ button:hover {
   align-items: center;
   gap: 0;
   background-image: url("../images/Team.png");
-  background-size: 100% 100%;
+  background-position-x: center;
   background-repeat: no-repeat;
   border-top: 5px solid white;
   padding: 5rem 0;
@@ -574,7 +574,8 @@ button:hover {
 
 @media screen and (min-width: 768px) {
   .team {
-    min-height: 1200px;
+    background-size: 100% 100%;
+    min-height: 1000px;
     align-items: flex-start;
   }
   .team .team__content {

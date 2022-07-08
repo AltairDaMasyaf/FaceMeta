@@ -2,14 +2,14 @@
 .team {
   @include flex(row, wrap, center, center, 0);
   background-image: url("../images/Team.png");
-  background-size: 100% 100%;
+  // background-size: 100% 100%;
+  background-position-x: center;
   background-repeat: no-repeat;
   border-top: 5px solid white;
   padding: 5rem 0;
   &__content {
     @include flex(column, wrap, center, center, 4rem);
     padding: 5rem 2rem;
-    // background-color: rgb(43, 49, 58, 0.5);
     width: 90%;
     border-radius: 2rem;
 
@@ -48,7 +48,8 @@
 //* Team-Desktop
 @media screen and (min-width: 768px) {
   .team {
-    min-height: 1200px;
+    background-size: 100% 100%;
+    min-height: 1000px;
     align-items: flex-start;
     .team__content {
       min-height: 700px;
